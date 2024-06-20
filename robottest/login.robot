@@ -9,6 +9,7 @@ Suite Setup      Open Browser    ${LOGIN_URL}    ${BROWSER}
 
 *** Variables ***
 ${BROWSER}                         Chrome
+${SLEEP_3S}                        3s
 ${TAG_LOGIN}                       LOGIN       
 ${LOGIN_URL}                       https://ch3plus.com/
 ${LIGHTBOX_ELEMENT}                id=cover-lightbox-close
@@ -20,25 +21,31 @@ ${USER_AGENTS}                     Firefox 89.0|Chrome 91.0.4472.124|Safari 14.1
 
 *** Test Cases ***
 TC-01 Login With Email And Password
-    [Documentation]    Test login with Apple
+    [Documentation]    Test login with Email and Password
     [Tags]                ${TAG_LOGIN}
     Close Lightbox        ${LIGHTBOX_ELEMENT}
     Click Login
     Select IFrame
     Wait Element          ${XPATH_USERNAME_ELEMENT}   
     Input Credentials     ${EMAIL}    ${PASSWORD}
+    SLEEP TIME            ${SLEEP_3S}
     Click Login Button
+    SLEEP TIME            ${SLEEP_3S}
     Wait Element          ${XPATH_PROFILE_IMAGE_ELEMENT}
 
-# TC-02 Login With Apple
-#     [Documentation]    Test login with Apple
-#     [Tags]                ${TAG_LOGIN}
-#     Close Lightbox
-#     Click Login
-#     Select IFrame
-#     Click Apple Icon
+TC-02 Login With Apple
+    [Documentation]    Test login with Apple
+    [Tags]                ${TAG_LOGIN}
+    Close Lightbox        ${LIGHTBOX_ELEMENT}
+    Click Login
+    Select IFrame
+    Wait Element          ${XPATH_USERNAME_ELEMENT}
+    Click Apple Icon
 
 *** Keywords ***
+SLEEP TIME
+    [Arguments]    ${TIME}
+    Sleep    ${TIME}
 Close Lightbox
     [Arguments]    ${LIGHTBOX_ELEMENT}
     Click Button          ${LIGHTBOX_ELEMENT}          
@@ -51,7 +58,7 @@ Select IFrame
 
 Wait Element
     [Arguments]    ${XPATH_ELEMENT}
-    Wait Until Page Contains Element    ${XPATH_ELEMENT}   timeout=30
+    Wait Until Page Contains Element    ${XPATH_ELEMENT}   timeout=10
 
 Input Credentials
     [Arguments]           ${USERNAME}    ${PASSWORD}           
