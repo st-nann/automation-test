@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.11.9 on darwin)" generated="2024-06-20T16:01:14.523013" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="/Users/sanyanee/BecWorld/automation-test/robottest/login.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-06-20T16:01:14.644619" level="INFO">Opening browser 'Chrome' to base url 'https://ch3plus.com/'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-20T16:01:14.644373" elapsed="8.029429"/>
+</kw>
+<test id="s1-t1" name="TC-01 Login With Email And Password" line="22">
+<kw name="Close Lightbox">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-20T16:01:22.683352" level="INFO">Clicking button 'id=cover-lightbox-close'.</msg>
+<arg>${LIGHTBOX_ELEMENT}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-20T16:01:22.679044" elapsed="0.190711"/>
+</kw>
+<arg>${LIGHTBOX_ELEMENT}</arg>
+<status status="PASS" start="2024-06-20T16:01:22.676508" elapsed="0.193579"/>
+</kw>
+<kw name="Click Login">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-06-20T16:01:22.872327" level="INFO">Clicking link 'xpath=//div[@class="nav-group"]/div[@class="register"]/a'.</msg>
+<arg>xpath=//div[@class="nav-group"]/div[@class="register"]/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-20T16:01:22.871510" elapsed="0.197781"/>
+</kw>
+<status status="PASS" start="2024-06-20T16:01:22.870824" elapsed="0.198613"/>
+</kw>
+<kw name="Select IFrame">
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2024-06-20T16:01:23.091299" level="INFO">Selecting frame 'xpath=//iframe[@name="iframe-login"]'.</msg>
+<arg>xpath=//iframe[@name="iframe-login"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2024-06-20T16:01:23.074886" elapsed="0.062136"/>
+</kw>
+<status status="PASS" start="2024-06-20T16:01:23.069667" elapsed="0.067555"/>
+</kw>
+<kw name="Wait Element">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${XPATH_ELEMENT}</arg>
+<arg>timeout=30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-20T16:01:23.137875" elapsed="1.134180"/>
+</kw>
+<arg>${XPATH_USERNAME_ELEMENT}</arg>
+<status status="PASS" start="2024-06-20T16:01:23.137431" elapsed="1.135334"/>
+</kw>
+<kw name="Input Credentials">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-20T16:01:24.274911" level="INFO">Typing text 'sanyanee_t@becworld.com' into text field 'xpath=//input[@id="username"]'.</msg>
+<arg>xpath=//input[@id="username"]</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-20T16:01:24.274626" elapsed="0.225966"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-06-20T16:01:24.501006" level="INFO">Typing password into text field 'xpath=//input[@id="password"]'.</msg>
+<msg time="2024-06-20T16:01:24.551163" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath=//input[@id="password"]</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-20T16:01:24.500795" elapsed="0.135917"/>
+</kw>
+<arg>${EMAIL}</arg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2024-06-20T16:01:24.273841" elapsed="0.363162"/>
+</kw>
+<kw name="Click Login Button">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-20T16:01:24.638156" level="INFO">Clicking button 'xpath=//button[@type="submit"]'.</msg>
+<arg>xpath=//button[@type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-20T16:01:24.637870" elapsed="0.084917"/>
+</kw>
+<status status="PASS" start="2024-06-20T16:01:24.637329" elapsed="0.085631"/>
+</kw>
+<kw name="Wait Element">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<msg time="2024-06-20T16:01:54.999351" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-33.png"&gt;&lt;img src="selenium-screenshot-33.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-06-20T16:01:55.000400" level="FAIL">Element '//a[@class="profile-img"]' did not appear in 30 seconds.</msg>
+<arg>${XPATH_ELEMENT}</arg>
+<arg>timeout=30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="FAIL" start="2024-06-20T16:01:24.724702" elapsed="30.278839">Element '//a[@class="profile-img"]' did not appear in 30 seconds.</status>
+</kw>
+<arg>${XPATH_PROFILE_IMAGE_ELEMENT}</arg>
+<status status="FAIL" start="2024-06-20T16:01:24.723828" elapsed="30.280037">Element '//a[@class="profile-img"]' did not appear in 30 seconds.</status>
+</kw>
+<doc>Test login with Apple</doc>
+<tag>LOGIN</tag>
+<status status="FAIL" start="2024-06-20T16:01:22.674348" elapsed="32.329930">Element '//a[@class="profile-img"]' did not appear in 30 seconds.</status>
+</test>
+<doc>Test cases for login.</doc>
+<status status="FAIL" start="2024-06-20T16:01:14.525452" elapsed="40.479806"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">LOGIN</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-06-20T16:01:14.535619" level="WARN">Imported resource file '/Users/sanyanee/BecWorld/automation-test/resources/keyword.robot' is empty.</msg>
+</errors>
+</robot>
