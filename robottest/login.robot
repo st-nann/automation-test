@@ -14,8 +14,8 @@ ${TAG_LOGIN}                       LOGIN
 ${LOGIN_URL}                       https://ch3plus.com/
 ${LIGHTBOX_ELEMENT}                id=cover-lightbox-close
 ${XPATH_USERNAME_ELEMENT}          //input[@id="username"]    
-${EMAIL}                           sanyanee_t@becworld.com
-${PASSWORD}                        ST-nann1911
+${EMAIL}                           automation-test@yopmail.com
+${PASSWORD}                        @Bec1234
 ${XPATH_PROFILE_IMAGE_ELEMENT}     //a[@class="profile-img"]  
 ${USER_AGENTS}                     Firefox 89.0|Chrome 91.0.4472.124|Safari 14.1|Edge 91.0.864.54  # Add more user agents as needed
 
