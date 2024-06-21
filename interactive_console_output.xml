@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.11.9 on darwin)" generated="2024-06-20T14:23:48.930276" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0.1 (Python 3.11.9 on darwin)" generated="2024-06-20T17:24:04.000019" rpa="false" schemaversion="5">
 <suite id="s1" name="Robot Interactive Console" source="/Users/sanyanee/.vscode/extensions/robocorp.robotframework-lsp-1.12.0/src/robotframework_ls/vendored/robotframework_interactive/robot_interactive_console.robot">
 <test id="s1-t1" name="Default Task/Test" line="5">
 <kw name="Interpreter Main Loop" owner="MainLoop">
-<status status="PASS" start="2024-06-20T14:23:48.946639" elapsed="6.922643"/>
+<status status="PASS" start="2024-06-20T17:24:04.015650" elapsed="1.626144"/>
 </kw>
-<status status="PASS" start="2024-06-20T14:23:48.946440" elapsed="6.923153"/>
+<status status="PASS" start="2024-06-20T17:24:04.015473" elapsed="1.626521"/>
 </test>
-<status status="PASS" start="2024-06-20T14:23:48.931088" elapsed="6.939032"/>
+<status status="PASS" start="2024-06-20T17:24:04.001321" elapsed="1.641000"/>
 </suite>
 <statistics>
 <total>
@@ -20,6 +20,6 @@
 </suite>
 </statistics>
 <errors>
-<msg time="2024-06-20T14:23:48.927555" level="WARN">Error in file '/Users/sanyanee/.vscode/extensions/robocorp.robotframework-lsp-1.12.0/src/robotframework_ls/vendored/robotframework_interactive/robot_interactive_console.robot' on line 4: Singular section headers like '*** Test Case ***' are deprecated. Use plural format like '*** Test Cases ***' instead.</msg>
+<msg time="2024-06-20T17:24:03.996485" level="WARN">Error in file '/Users/sanyanee/.vscode/extensions/robocorp.robotframework-lsp-1.12.0/src/robotframework_ls/vendored/robotframework_interactive/robot_interactive_console.robot' on line 4: Singular section headers like '*** Test Case ***' are deprecated. Use plural format like '*** Test Cases ***' instead.</msg>
 </errors>
 </robot>
